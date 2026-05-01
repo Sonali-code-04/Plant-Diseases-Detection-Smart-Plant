@@ -77,7 +77,7 @@ export default function DetectionPage() {
         const formData = new FormData();
         formData.append("image", file);
         
-        const res = await fetch('https://plant-diseases-detection-smart-plant.onrender.com', {
+        const res = await fetch('https://plant-diseases-detection-smart-plant.onrender.com/api/predict', {
             method: "POST",
             body: formData,
          });
