@@ -28,7 +28,7 @@ export default function Dashboard({onBack}) {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/plant-data');
+      const res = await axios.get('https://plant-diseases-detection-smart-plant.onrender.com/api/plant-data');
       setData(res.data);
       setLoading(false);
     }catch (err) {
@@ -37,7 +37,7 @@ export default function Dashboard({onBack}) {
   };
 
   const handleWatering = async () => {
-    await axios.post('http://localhost:5000/api/water');
+    await axios.post('https://plant-diseases-detection-smart-plant.onrender.com/api/water');
     alert("Watering sequence initiated !");
     fetchData();
   };
